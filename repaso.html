@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Repaso posterior a cada sesion de capacitacion de HubSpot. Portal 48427391.">
+<meta name="description" content="Repaso de la capacitación de HubSpot de Monific, por módulo.">
 <title>Repaso HubSpot Monific</title>
 <style>
   :root {
@@ -459,18 +460,18 @@
   <!-- ============ HOME ============ -->
   <section id="home">
     <div class="masthead">
-      <div class="eyebrow">Portal 48427391 · Repaso posterior a sesión</div>
+      <div class="eyebrow">Repaso por módulo</div>
       <div class="row">
         <h1>¿Se te quedó?</h1>
       </div>
-      <p>Seis preguntas por sesión. Cinco minutos. No es examen: cada respuesta te explica el porqué, que es lo que de verdad se queda.</p>
+      <p>Seis preguntas por módulo. Cinco minutos. No es examen: cada respuesta te explica el porqué, que es lo que de verdad se queda.</p>
     </div>
 
-    <div class="eyebrow" style="margin-bottom:.75rem">Elige la sesión que acabas de tomar</div>
+    <div class="eyebrow" style="margin-bottom:.75rem">Elige el módulo que quieres repasar</div>
     <div class="grid" id="sessionGrid"></div>
 
     <footer class="note">
-      <span>Guía de HubSpot para el equipo Monific</span>
+      <span>Guía de HubSpot para el equipo Monific · Versión 2 · Noviembre 2026</span>
       <span id="resetWrap"></span>
     </footer>
   </section>
@@ -478,7 +479,7 @@
   <!-- ============ QUIZ ============ -->
   <section id="quiz" class="hidden">
     <div class="topbar">
-      <button class="linkbtn" id="backBtn">← Todas las sesiones</button>
+      <button class="linkbtn" id="backBtn">← Todos los módulos</button>
       <span class="counter" id="counter"></span>
     </div>
     <div class="eyebrow" id="quizSession"></div>
@@ -498,7 +499,7 @@
   <!-- ============ RESULT ============ -->
   <section id="result" class="hidden">
     <div class="topbar">
-      <button class="linkbtn" id="backBtn2">← Todas las sesiones</button>
+      <button class="linkbtn" id="backBtn2">← Todos los módulos</button>
       <span class="counter" id="resultSession"></span>
     </div>
 
@@ -521,8 +522,8 @@
       <div class="review" id="review"></div>
 
       <div class="actions">
-        <button class="btn ghost" id="retryBtn">Repetir esta sesión</button>
-        <button class="btn" id="anotherBtn">Otra sesión</button>
+        <button class="btn ghost" id="retryBtn">Repetir este módulo</button>
+        <button class="btn" id="anotherBtn">Otro módulo</button>
       </div>
     </div>
   </section>
@@ -542,7 +543,7 @@ const SESSIONS = [
             "Porque buscar por nombre es más lento"],
         a: 1,
         why: "«Miguel Ángel Rodríguez», «Miguel A. Rodríguez» y «miguel rodriguez» son tres personas distintas para el buscador. El correo es una sola.",
-        ref: "07 · Buscar antes de crear" },
+        ref: "Base de conocimiento · 07 Buscar antes de crear" },
 
       { topic: "Dónde va la nota", q: "Tratas con tres personas de la misma desarrolladora. ¿Dónde dejas las notas de tus conversaciones?",
         o: ["En el contacto de cada persona, por separado",
@@ -551,7 +552,7 @@ const SESSIONS = [
             "Da igual, HubSpot las junta solo"],
         a: 1,
         why: "Si cada quien deja notas en su contacto, nadie ve el panorama. Cuando hay varios interlocutores de la misma organización, la nota va en la empresa.",
-        ref: "04 · Los cuatro objetos" },
+        ref: "Base de conocimiento · 04 Los cinco objetos" },
 
       { topic: "Crear contactos", q: "Eres del equipo de Inversionistas y un contacto que esperabas no aparece en HubSpot. ¿Qué haces?",
         o: ["Lo creas a mano para no detener el proceso",
@@ -560,7 +561,7 @@ const SESSIONS = [
             "Le pides al cliente que se registre otra vez"],
         a: 1,
         why: "Los contactos entran solos. La única excepción es el equipo de Solicitantes. Si falta uno, es un aviso de que algo falló — crearlo a mano tapa el problema y además duplica.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Modelo de datos", q: "¿En qué objeto vive la cobranza de una campaña fondeada?",
         o: ["En un objeto de cobranza propio",
@@ -569,7 +570,7 @@ const SESSIONS = [
             "En un ticket por cada cuota"],
         a: 2,
         why: "Cobranza vive en tickets: un ticket por campaña fondeada, que la sigue de la primera cuota a la última. No es uno por cuota.",
-        ref: "04 · Los cuatro objetos" },
+        ref: "Base de conocimiento · 04 Los cinco objetos" },
 
       { topic: "Frontera de cálculo", q: "El saldo que muestra HubSpot no coincide con el del Admin de Monific. ¿Qué haces?",
         o: ["Lo corriges en HubSpot para que quede bien",
@@ -578,7 +579,7 @@ const SESSIONS = [
             "Lo corriges y además avisas a TI"],
         a: 1,
         why: "HubSpot no calcula datos financieros, los recibe. Si lo corriges a mano, la siguiente sincronización lo sobrescribe — y mientras tanto hay dos versiones distintas del mismo dato.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Vista o lista", q: "Quieres organizar tu cartera para trabajarla cada mañana. ¿Qué usas?",
         o: ["Una lista",
@@ -587,7 +588,7 @@ const SESSIONS = [
             "Un reporte"],
         a: 1,
         why: "La vista guardada es para trabajar el día a día. Las listas son para campañas de marketing y además consumen cupo de contactos.",
-        ref: "12 · Vistas guardadas y filtros" }
+        ref: "Base de conocimiento · 12 Vistas guardadas y filtros" }
     ]
   },
   {
@@ -601,7 +602,7 @@ const SESSIONS = [
             "Recibir el correo de bienvenida de HubSpot"],
         a: 1,
         why: "La primera prueba funciona aunque la conexión esté a medias. La que confirma es la segunda: que un correo enviado desde tu cliente de correo también se registre.",
-        ref: "02 · Conectar tu correo y calendario" },
+        ref: "Base de conocimiento · 02 Conectar tu correo y calendario" },
 
       { topic: "Privacidad", q: "Con el correo conectado, ¿qué correos ve HubSpot?",
         o: ["Todos los de tu bandeja",
@@ -610,7 +611,7 @@ const SESSIONS = [
             "Los de los últimos 30 días, todos"],
         a: 2,
         why: "HubSpot solo registra correos con contactos del CRM. Tus correos personales y los de compañeros no los ve.",
-        ref: "02 · Conectar tu correo y calendario" },
+        ref: "Base de conocimiento · 02 Conectar tu correo y calendario" },
 
       { topic: "Qué se registra solo", q: "Le mandaste un WhatsApp a un cliente desde tu teléfono personal. ¿Qué pasa en HubSpot?",
         o: ["Se registra solo si el teléfono está en el contacto",
@@ -619,7 +620,7 @@ const SESSIONS = [
             "Se registra solo si el cliente responde"],
         a: 1,
         why: "WhatsApp desde tu teléfono, llamadas desde tu celular, LinkedIn y SMS personales no se registran solos. Si no lo registras, tu trabajo no existe en ningún reporte.",
-        ref: "08 · Registrar lo que hiciste" },
+        ref: "Base de conocimiento · 08 Registrar lo que hiciste" },
 
       { topic: "Plantilla o fragmento", q: "Respondes la misma frase corta muchas veces al día dentro de conversaciones distintas. ¿Qué te conviene?",
         o: ["Una plantilla",
@@ -628,7 +629,7 @@ const SESSIONS = [
             "Un documento"],
         a: 1,
         why: "El fragmento es un bloque corto que insertas escribiendo # y un atajo. La plantilla es un correo completo. Para atención a cliente, los fragmentos son lo que permite responder en menos de 5 minutos.",
-        ref: "13 · Plantillas, fragmentos y documentos" },
+        ref: "Base de conocimiento · 13 Plantillas, fragmentos y documentos" },
 
       { topic: "Agendar", q: "¿Qué resuelve el enlace de agendamiento?",
         o: ["Que el cliente vea tus horas libres reales y elija, sin ir y venir por correo",
@@ -637,7 +638,7 @@ const SESSIONS = [
             "Que puedas ver el calendario del cliente"],
         a: 0,
         why: "Pegas el enlace en tu firma, el cliente entra, ve tu disponibilidad real y elige. La reunión se crea en tu calendario y en HubSpot.",
-        ref: "10 · Correo y reuniones desde HubSpot" },
+        ref: "Base de conocimiento · 10 Correo y reuniones desde HubSpot" },
 
       { topic: "Documentos", q: "¿Qué ganas al mandar un material como documento de HubSpot en vez de adjuntarlo?",
         o: ["Pesa menos",
@@ -646,7 +647,7 @@ const SESSIONS = [
             "El cliente puede editarlo"],
         a: 1,
         why: "Sabes si el inversionista realmente leyó el material antes de llamarle. Y si actualizas el archivo, el enlace sigue sirviendo.",
-        ref: "13 · Plantillas, fragmentos y documentos" }
+        ref: "Base de conocimiento · 13 Plantillas, fragmentos y documentos" }
     ]
   },
   {
@@ -660,16 +661,16 @@ const SESSIONS = [
             "¿Cuánto dinero necesita?"],
         a: 1,
         why: "Una sola pregunta. Si tiene inmueble para garantía es viable; si no, no lo es. Los casos intermedios los decide el asesor revisando avalúo, monto y capacidad de pago.",
-        ref: "18 · Ventas Solicitantes" },
+        ref: "Manual operativo · cap. 4 Solicitantes" },
 
-      { topic: "Sin garantía", q: "Un solicitante no tiene inmueble. Le explicas que puede invertir. ¿Le creas un negocio de inversionista?",
-        o: ["Sí, de inmediato, para no perder el lead",
-            "No, hasta que la persona exprese interés explícito",
-            "Sí, pero en etapa congelado",
-            "No, nunca se puede"],
+      { topic: "Sin garantía", q: "Un solicitante indica en el formulario que no tiene inmueble en garantía. ¿Qué pasa?",
+        o: ["Se crea su negocio de solicitante igual",
+            "Pasa al pipeline de Inversionistas, con un asesor de ese equipo",
+            "Se descarta el contacto",
+            "Se queda sin asignar hasta que alguien lo revise"],
         a: 1,
-        why: "Se le informa la alternativa, pero el negocio de inversionista no se crea hasta que la persona lo pida. Crear negocios que nadie pidió ensucia el embudo.",
-        ref: "18 · Ventas Solicitantes" },
+        why: "Sin garantía no puede solicitar financiamiento, pero sí puede invertir. Por eso pasa solo al pipeline de Inversionistas, con un asesor que le presenta esa alternativa.",
+        ref: "Manual operativo · cap. 4 Solicitantes" },
 
       { topic: "Drive y HubSpot", q: "El solicitante ya subió todos sus documentos a Drive. ¿Qué hace avanzar el proceso?",
         o: ["Que los archivos estén en la carpeta",
@@ -677,8 +678,8 @@ const SESSIONS = [
             "Que el sistema detecte los archivos nuevos",
             "Que le mandes un correo al comité"],
         a: 1,
-        why: "HubSpot no lee Drive. Drive guarda los archivos, HubSpot guarda el estado — y el estado es lo que mueve el proceso. Por eso existe el formulario puente de confirmación de carga.",
-        ref: "18 · Ventas Solicitantes" },
+        why: "HubSpot no lee Drive. Drive guarda los archivos, HubSpot guarda el estado — y el estado es lo que mueve el proceso.",
+        ref: "Manual operativo · cap. 4 Solicitantes" },
 
       { topic: "Tiempos", q: "¿Cuál es el SLA habitual del proceso de firma ante notario?",
         o: ["5 días hábiles",
@@ -687,7 +688,7 @@ const SESSIONS = [
             "30 días naturales"],
         a: 2,
         why: "15 días hábiles. Conviene tener una vista ordenada por fecha de entrada a esa etapa para vigilarlos.",
-        ref: "18 · Ventas Solicitantes" },
+        ref: "Manual operativo · cap. 4 Solicitantes" },
 
       { topic: "Primer contacto", q: "Llega un solicitante nuevo por el formulario. ¿En cuánto tiempo debe haber contacto humano?",
         o: ["Menos de 5 minutos",
@@ -696,7 +697,7 @@ const SESSIONS = [
             "El mismo día, sin hora fija"],
         a: 1,
         why: "24 horas hábiles para el primer contacto humano. Los 5 minutos son el compromiso de atención a cliente, que es otro proceso.",
-        ref: "18 · Ventas Solicitantes" },
+        ref: "Manual operativo · cap. 4 Solicitantes" },
 
       { topic: "Seguimiento", q: "¿En qué días se da seguimiento al expediente de un solicitante?",
         o: ["Cada tercer día, sin límite",
@@ -705,7 +706,7 @@ const SESSIONS = [
             "Una vez por semana durante un mes"],
         a: 1,
         why: "Días 2, 3, 7 y 15, escalando tareas vencidas. Al día 15 pasa a pausa o seguimiento.",
-        ref: "18 · Ventas Solicitantes" }
+        ref: "Manual operativo · cap. 4 Solicitantes" }
     ]
   },
   {
@@ -719,7 +720,7 @@ const SESSIONS = [
             "Que haga su primera inversión"],
         a: 2,
         why: "Nivel 3 es la cuenta STP creada. El indicador de que el KYC está completo es la CLABE: sin CLABE, no está completo.",
-        ref: "19 · Ventas Inversionistas" },
+        ref: "Manual operativo · cap. 5 Inversionistas" },
 
       { topic: "Niveles de registro", q: "¿Y qué se necesita para llegar a nivel 4?",
         o: ["Depositar dinero en la cuenta",
@@ -728,7 +729,7 @@ const SESSIONS = [
             "Cumplir 90 días como inversionista"],
         a: 1,
         why: "Nivel 4 solo con la primera compra confirmada. Tener saldo no basta: el nivel sube por compra, no por depósito.",
-        ref: "19 · Ventas Inversionistas" },
+        ref: "Manual operativo · cap. 5 Inversionistas" },
 
       { topic: "Tu cliente objetivo", q: "Un inversionista está en nivel 3 y no tiene fecha de primera inversión. ¿Qué significa?",
         o: ["Que su cuenta tiene un problema técnico",
@@ -737,16 +738,16 @@ const SESSIONS = [
             "Que ya no le interesa"],
         a: 1,
         why: "Tiene CLABE y no ha invertido. Es el cliente objetivo del A.A.I. y la razón de tener esa vista guardada abierta cada mañana.",
-        ref: "19 · Ventas Inversionistas" },
+        ref: "Manual operativo · cap. 5 Inversionistas" },
 
-      { topic: "El monto que mueve", q: "¿Qué monto de fondeo detiene la secuencia de empuje y mueve el negocio a Inversionista Activo?",
-        o: ["Cualquier depósito",
-            "$1,000 MXN o más",
-            "$5,000 MXN o más",
-            "El monto mínimo del proyecto"],
+      { topic: "Cambio de etapa", q: "¿Qué hace que un negocio pase de Perfil Activo a Inversionista Activo?",
+        o: ["Cualquier depósito en su cuenta",
+            "Que el Admin registre su primera compra",
+            "Que el asesor lo mueva a mano",
+            "Que entre a la app"],
         a: 1,
-        why: "$1,000 MXN o más. La secuencia de correos y WhatsApp se detiene sola cuando entra ese fondeo.",
-        ref: "19 · Ventas Inversionistas" },
+        why: "El cambio es automático: cuando el Admin envía la fecha de la primera compra, el negocio pasa solo a Inversionista Activo y se envía la confirmación de primera inversión.",
+        ref: "Manual operativo · cap. 5 Inversionistas" },
 
       { topic: "Congelado", q: "Un inversionista no tiene inversiones activas pero sí tiene saldo en su cuenta. ¿Qué pasa?",
         o: ["Se congela a los 90 días",
@@ -755,7 +756,7 @@ const SESSIONS = [
             "Se congela solo si además no entra a la app"],
         a: 1,
         why: "Si hay saldo positivo, el negocio permanece activo. Y nunca se congela a alguien solo por no entrar a la app si tiene inversiones vivas.",
-        ref: "19 · Ventas Inversionistas" },
+        ref: "Manual operativo · cap. 5 Inversionistas" },
 
       { topic: "El momento de oro", q: "¿Cuándo es más probable que un inversionista reinvierta?",
         o: ["Al abrir su cuenta",
@@ -764,7 +765,7 @@ const SESSIONS = [
             "Cuando sale un proyecto nuevo"],
         a: 1,
         why: "Cerró su campaña, tiene el capital y los rendimientos de vuelta, y la ventana dura poco: después el dinero sale de la plataforma. Ahí es donde una llamada rinde más.",
-        ref: "19 · Ventas Inversionistas" }
+        ref: "Manual operativo · cap. 5 Inversionistas" }
     ]
   },
   {
@@ -778,34 +779,34 @@ const SESSIONS = [
             "Uno por solicitante, sin importar campañas"],
         a: 1,
         why: "Un ticket por campaña fondeada. Sigue la campaña de la primera cuota a la última.",
-        ref: "20 · Cobranza" },
+        ref: "Manual operativo · cap. 6 Cobranza" },
 
-      { topic: "La hora límite", q: "¿A qué hora del Día 0 se corta la validación de pago?",
-        o: ["A las 12:00",
-            "A las 15:00",
-            "A las 18:00",
-            "A las 23:59"],
+      { topic: "De dónde vienen los datos", q: "¿Quién calcula los días de mora y el estado de pago de una campaña?",
+        o: ["El ejecutivo de cobranza, a mano",
+            "HubSpot, con una fórmula",
+            "El Admin de Monific; HubSpot los recibe cada madrugada",
+            "Finanzas, una vez al mes"],
         a: 2,
-        why: "18:00. Sin confirmación explícita de pago registrada en HubSpot antes de esa hora, el sistema asume que no pagó.",
-        ref: "20 · Cobranza" },
+        why: "Los calcula el Admin y llegan a HubSpot cada madrugada. HubSpot los guarda, dispara los avisos y crea las tareas, pero la cuenta no la hace él.",
+        ref: "Manual operativo · cap. 6 Cobranza" },
 
-      { topic: "Día 1", q: "El solicitante no pagó el Día 0. ¿Cuántos días de gracia tiene?",
-        o: ["Tres días",
-            "Un día",
-            "Hasta el siguiente día hábil",
-            "Ninguno: Día 1 es incumplimiento"],
-        a: 3,
-        why: "Día 1 es incumplimiento y no hay periodos de gracia. Lo que sí se recorre es la fecha límite cuando cae en día inhábil.",
-        ref: "20 · Cobranza" },
+      { topic: "Día 61", q: "Un ticket de cobranza llega a 61 días de mora. ¿Qué pasa?",
+        o: ["Nada, hasta que alguien lo mueva",
+            "Pasa solo a Ejecución de Garantía y sale el aviso de ruta prejudicial",
+            "Se cierra por incumplimiento",
+            "Se abre un refinanciamiento"],
+        a: 1,
+        why: "A partir de 61 días de mora el ticket pasa solo a Ejecución de Garantía, con aviso al responsable y tarea de escalamiento a la ruta prejudicial o judicial.",
+        ref: "Manual operativo · cap. 6 Cobranza" },
 
       { topic: "Refinanciamiento", q: "El comité aprueba una reestructura. ¿Qué haces con el ticket?",
         o: ["Le cambias los plazos y las condiciones",
-            "Lo mueves a Cierre por Refinanciamiento y creas un ticket nuevo",
+            "Pasa a Cierre por Refinanciamiento y el Admin crea un ticket nuevo, ligado al anterior",
             "Lo mueves a la etapa Refinanciamiento y ahí se queda",
             "Lo cierras y no creas nada"],
         a: 1,
         why: "Un refinanciamiento es la extinción de un caso y el nacimiento de otro, no un ajuste de plazos.",
-        ref: "20 · Cobranza" },
+        ref: "Manual operativo · cap. 6 Cobranza" },
 
       { topic: "Mora moderada", q: "A partir de mora moderada, ¿qué campo se vuelve obligatorio?",
         o: ["Razón del retraso",
@@ -814,7 +815,7 @@ const SESSIONS = [
             "Abogado externo asignado"],
         a: 1,
         why: "La nota de acuerdo de pago. Es el registro de qué se pactó con el solicitante, y es lo que se revisa después.",
-        ref: "20 · Cobranza" },
+        ref: "Manual operativo · cap. 6 Cobranza" },
 
       { topic: "Tasas y penalizaciones", q: "El solicitante te pregunta exactamente cuánto va a pagar de interés moratorio. ¿Qué haces?",
         o: ["Le dices el porcentaje que recuerdas de la capacitación",
@@ -823,7 +824,7 @@ const SESSIONS = [
             "Lo mandas a leer su contrato y cuelgas"],
         a: 1,
         why: "Las condiciones están en su contrato de financiamiento y las confirma Finanzas. No se citan cifras de memoria — pero tampoco se deja al cliente sin respuesta.",
-        ref: "20 · Cobranza" }
+        ref: "Manual operativo · cap. 6 Cobranza" }
     ]
   },
   {
@@ -837,7 +838,7 @@ const SESSIONS = [
             "Llamada telefónica"],
         a: 2,
         why: "El chat web clasifica solo, con la opción que elige el cliente en el chatbot. En WhatsApp, correo y llamada, la tipificación la haces tú durante la interacción.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Compromiso", q: "¿Cuál es el compromiso de primera respuesta de Monific?",
         o: ["Menos de 5 minutos",
@@ -846,7 +847,7 @@ const SESSIONS = [
             "El mismo día"],
         a: 0,
         why: "Menos de 5 minutos, y menos de 2 se considera respuesta excelente. Por eso la bandeja de conversaciones se mira seguido, no una vez al día.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Nunca silencio", q: "Entran más casos de los que puedes atender a fondo. ¿Qué haces?",
         o: ["Atiendes bien los primeros y los demás esperan",
@@ -855,7 +856,7 @@ const SESSIONS = [
             "Cierras los menos importantes"],
         a: 1,
         why: "«Si el volumen supera la capacidad, se responde primero y se profundiza después. Nunca silencio.» Una respuesta corta a tiempo vale más que una completa tarde.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Responder rápido", q: "¿Qué herramienta te ayuda más a cumplir los 5 minutos?",
         o: ["Las secuencias",
@@ -864,7 +865,7 @@ const SESSIONS = [
             "La app móvil"],
         a: 1,
         why: "Escribes # y el atajo, y media respuesta ya está puesta. Funcionan también dentro del chat en vivo.",
-        ref: "13 · Plantillas, fragmentos y documentos" },
+        ref: "Base de conocimiento · 13 Plantillas, fragmentos y documentos" },
 
       { topic: "Autoservicio", q: "Resolviste el mismo problema por tercera vez esta semana. ¿Qué haces además de resolverlo?",
         o: ["Nada, es parte del trabajo",
@@ -873,7 +874,7 @@ const SESSIONS = [
             "Creas una plantilla y no dices nada"],
         a: 1,
         why: "Casi 4 de cada 10 tickets son datos de cuenta y accesos. Ese tipo de volumen se resuelve mejor con un artículo de ayuda que con más gente contestando. La señal la tiene que levantar alguien.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Qué no se hace", q: "Un cliente insiste en saber cuándo se va a fondear un proyecto. ¿Qué le dices?",
         o: ["Una fecha estimada, para que se quede tranquilo",
@@ -882,7 +883,7 @@ const SESSIONS = [
             "Que nadie puede saberlo"],
         a: 2,
         why: "No se prometen fechas ni rendimientos. Esa frase es la salida permitida: gana tiempo sin inventar.",
-        ref: "05 · Las diez reglas de Monific" }
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" }
     ]
   },
   {
@@ -896,7 +897,7 @@ const SESSIONS = [
             "Tipo E — reclamación formal"],
         a: 2,
         why: "Es el caso que más se equivoca. Aunque debajo haya un problema técnico, el cliente está expresando inconformidad con Monific: es D, y lo cierra el Director Comercial. Puedes escalar a TI en paralelo.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Cuándo tipificar", q: "¿En qué momento se captura el tipo de ticket?",
         o: ["Al cerrar el ticket, cuando ya sabes de qué se trataba",
@@ -905,7 +906,7 @@ const SESSIONS = [
             "Lo pone el sistema siempre"],
         a: 1,
         why: "Durante la interacción. De ese campo dependen la ruta del caso y los avisos que se disparan: elegirlo tarde desvía todo.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Escalar a TI", q: "¿Dónde trabaja el equipo de TI los tickets escalados?",
         o: ["En HubSpot, en el mismo ticket",
@@ -914,7 +915,7 @@ const SESSIONS = [
             "En el Admin de Monific"],
         a: 1,
         why: "TI trabaja en Notion. Por eso el escalamiento tiene dos mitades y las dos son tuyas: registrar en HubSpot y avisar en Notion, incluyendo el folio.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Seguimiento", q: "Tu ticket está escalado a TI. ¿Cada cuánto le das seguimiento?",
         o: ["Cada 8 horas, validando con TI y actualizando al cliente",
@@ -923,7 +924,7 @@ const SESSIONS = [
             "Cada 48 horas"],
         a: 0,
         why: "Cada 8 horas, y en cada vuelta también se actualiza al cliente. El ticket sigue siendo tuyo: no hay traspaso.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Categorías", q: "«No me llegó mi dinero.» ¿Qué categoría de TI le pones?",
         o: ["Problemas técnicos en app",
@@ -932,7 +933,7 @@ const SESSIONS = [
             "Consultas e información"],
         a: 1,
         why: "«Problemas técnicos en app» es solo cuando la app falla como app: no abre, no descarga, truena. Si la app funciona pero el dato está mal, la categoría es la del dato.",
-        ref: "21 · Atención a cliente" },
+        ref: "Manual operativo · cap. 7 Servicio a clientes" },
 
       { topic: "Cerrar", q: "¿Qué hace falta para cerrar un ticket, además de resolver el problema?",
         o: ["Escribir «resuelto» en la resolución",
@@ -941,7 +942,7 @@ const SESSIONS = [
             "La autorización de tu líder"],
         a: 2,
         why: "La resolución documentada lleva tres cosas: cuál era el problema, qué se hizo, y cómo se confirmó. Sin la confirmación del cliente, no se cierra.",
-        ref: "21 · Atención a cliente" }
+        ref: "Manual operativo · cap. 7 Servicio a clientes" }
     ]
   },
   {
@@ -950,12 +951,12 @@ const SESSIONS = [
     qs: [
       { topic: "Separación", q: "Un ticket de queja escala a reclamación formal. ¿Qué haces?",
         o: ["Cambias el tipo a E y mueves el ticket al pipeline UNE",
-            "Creas un ticket nuevo en el pipeline UNE y dejas referencia cruzada",
+            "La registras en el pipeline UNE, separada del caso de servicio",
             "Cambias solo el pipeline y dejas el tipo como estaba",
             "Cierras el ticket de queja y no creas nada"],
         a: 1,
-        why: "Una reclamación formal nunca comparte ticket con un caso de servicio. Genera un ticket aparte, con su folio, sus fechas y su dictamen.",
-        ref: "11 · Mover un negocio o un ticket de etapa" },
+        why: "Una reclamación formal nunca se sigue dentro de un caso de servicio. Va en el pipeline UNE, con su folio, sus fechas y su dictamen.",
+        ref: "Base de conocimiento · 11 Mover un negocio o un ticket de etapa" },
 
       { topic: "Reapertura", q: "Un cliente cuya reclamación ya se cerró vuelve con el mismo tema. ¿Qué haces?",
         o: ["Reabres el ticket UNE cerrado",
@@ -964,7 +965,7 @@ const SESSIONS = [
             "Lo agregas como nota al ticket anterior"],
         a: 2,
         why: "Los tickets UNE cerrados no se reabren nunca. Nueva reclamación, ticket nuevo. Los de atención sí se reabren si llega un comentario sobre la misma cadena.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "El plazo regulatorio", q: "¿Cuál es el plazo regulatorio para entregar el dictamen de una reclamación?",
         o: ["10 días hábiles",
@@ -973,7 +974,7 @@ const SESSIONS = [
             "30 días naturales"],
         a: 2,
         why: "30 días hábiles, no naturales. Es una obligación ante CNBV y CONDUSEF, no un compromiso interno.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Los dos relojes", q: "Si el plazo regulatorio es de 30 días hábiles, ¿para qué existe un compromiso interno de 10 días?",
         o: ["Para poder cobrar antes",
@@ -982,7 +983,7 @@ const SESSIONS = [
             "Es el mismo plazo contado distinto"],
         a: 1,
         why: "Son dos relojes distintos. Los 10 días son el compromiso operativo de Monific consigo misma, y existen precisamente para que el plazo regulatorio no se agote.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Cierre", q: "¿Qué se necesita para poder cerrar un ticket de reclamación?",
         o: ["Que el cliente confirme que quedó satisfecho",
@@ -991,7 +992,7 @@ const SESSIONS = [
             "La autorización de Compliance"],
         a: 1,
         why: "El cierre exige las dos cosas: el resultado (aprobado o rechazado) y el archivo del dictamen. Sin dictamen no hay cierre.",
-        ref: "05 · Las diez reglas de Monific" },
+        ref: "Base de conocimiento · 05 Las diez reglas de Monific" },
 
       { topic: "Quién lo lleva", q: "¿Quién es responsable del pipeline UNE y del cierre con dictamen?",
         o: ["El ejecutivo de atención a clientes",
@@ -1000,7 +1001,7 @@ const SESSIONS = [
             "El asesor que atendió al cliente"],
         a: 1,
         why: "El Director Comercial, con soporte de Cumplimiento Legal. El E.A.C. orienta al cliente sobre cómo presentar la reclamación y cierra su ticket de servicio — pero eso no cierra la reclamación.",
-        ref: "21 · Atención a cliente" }
+        ref: "Manual operativo · cap. 7 Servicio a clientes" }
     ]
   },
   {
@@ -1014,7 +1015,7 @@ const SESSIONS = [
             "Los que entraron esta semana"],
         a: 1,
         why: "Es donde se pierden los casos. Anticipa problemas en vez de reportarlos, y por eso se abre cada mañana.",
-        ref: "12 · Vistas guardadas y filtros" },
+        ref: "Base de conocimiento · 12 Vistas guardadas y filtros" },
 
       { topic: "Filtros", q: "Quieres ver los tickets tipo D y los tipo E en una sola vista. ¿Cómo los unes?",
         o: ["Con Y, en el mismo grupo",
@@ -1023,7 +1024,7 @@ const SESSIONS = [
             "No se puede en una sola vista"],
         a: 1,
         why: "Ningún ticket es D y E al mismo tiempo: con Y la vista sale vacía. Cuando filtras el mismo campo con varios valores, va O.",
-        ref: "12 · Vistas guardadas y filtros" },
+        ref: "Base de conocimiento · 12 Vistas guardadas y filtros" },
 
       { topic: "Leer el embudo", q: "Tienes un negocio activo que lleva 60 días sin actividad. Para leer tu embudo con honestidad, ¿qué es?",
         o: ["Parte de tu embudo: sigue abierto",
@@ -1032,7 +1033,7 @@ const SESSIONS = [
             "Un error del sistema"],
         a: 1,
         why: "Un negocio que lleva 60 días sin actividad no está en tu embudo: está muerto y no lo has enterrado. Un embudo inflado no sirve para decidir nada.",
-        ref: "15 · Tus reportes y tu tablero" },
+        ref: "Base de conocimiento · 15 Tus reportes y tu tablero" },
 
       { topic: "Trabajo en lote", q: "Necesitas dejar la misma tarea de seguimiento a 20 clientes. ¿Cómo lo haces?",
         o: ["Uno por uno, abriendo cada registro",
@@ -1041,7 +1042,7 @@ const SESSIONS = [
             "Creas una secuencia"],
         a: 1,
         why: "Marcar casillas y usar la barra de acciones sirve para crear tareas, cambiar propietario, editar una propiedad o inscribir en secuencia. Casi nadie lo usa y ahorra horas.",
-        ref: "17 · Trucos que ahorran tiempo" },
+        ref: "Base de conocimiento · 17 Trucos que ahorran tiempo" },
 
       { topic: "El hábito del Excel", q: "¿Cuál es el problema real de llevar tu cartera en un Excel aparte?",
         o: ["Que Excel es más lento",
@@ -1050,7 +1051,7 @@ const SESSIONS = [
             "Que HubSpot lo bloquea"],
         a: 1,
         why: "El problema no es que Excel sea peor. Es que cuando alguien cubre tu ausencia, empieza de cero — y tu esfuerzo no se ve en ningún reporte.",
-        ref: "17 · Trucos que ahorran tiempo" },
+        ref: "Base de conocimiento · 17 Trucos que ahorran tiempo" },
 
       { topic: "Cadencia", q: "¿Cada cuánto conviene revisar tus propios números?",
         o: ["Todos los días",
@@ -1059,7 +1060,7 @@ const SESSIONS = [
             "Solo cuando te los pidan"],
         a: 1,
         why: "Diario genera ruido; mensual es demasiado tarde para corregir. Cinco minutos, el mismo día cada semana.",
-        ref: "15 · Tus reportes y tu tablero" }
+        ref: "Base de conocimiento · 15 Tus reportes y tu tablero" }
     ]
   }
 ];
@@ -1094,7 +1095,7 @@ function renderHome() {
       : `<span class="score-chip ${prev >= 5 ? "good" : "bad"}">${prev}/${s.qs.length}</span>`;
 
     btn.innerHTML =
-      `<span class="num">Sesión ${String(s.id).padStart(2, "0")}</span>
+      `<span class="num">Módulo ${String(s.id).padStart(2, "0")}</span>
        <span class="title">${s.title}</span>
        <span class="meta"><span>${s.qs.length} preguntas</span>${chip}</span>`;
     btn.addEventListener("click", () => startSession(s.id));
@@ -1125,7 +1126,7 @@ function startSession(id) {
   current = SESSIONS.find((s) => s.id === id);
   idx = 0;
   answers = [];
-  $("quizSession").textContent = `Sesión ${String(current.id).padStart(2, "0")} · ${current.title}`;
+  $("quizSession").textContent = `Módulo ${String(current.id).padStart(2, "0")} · ${current.title}`;
   show(quizEl);
   renderQuestion();
 }
@@ -1201,7 +1202,7 @@ function renderResult() {
   scores[current.id] = score;
   save();
 
-  $("resultSession").textContent = `Sesión ${String(current.id).padStart(2, "0")} · ${current.title}`;
+  $("resultSession").textContent = `Módulo ${String(current.id).padStart(2, "0")} · ${current.title}`;
   $("selloNum").textContent = score;
   $("selloOf").textContent = `de ${total}`;
 
@@ -1214,7 +1215,7 @@ function renderResult() {
     body = "Te quedó completo. Si quieres afinar, vuelve en una semana: lo que se repasa espaciado es lo que se queda.";
   } else if (score >= 5) {
     title = "Bien.";
-    body = "Dominas la sesión. Dale una leída a lo que fallaste — abajo está en qué artículo está.";
+    body = "Dominas el módulo. Dale una leída a lo que fallaste — abajo está en qué artículo está.";
   } else if (score >= 3) {
     title = "A medias.";
     body = "Hay huecos que conviene cerrar antes de la siguiente sesión. Repasa los artículos de abajo y vuelve a intentarlo.";

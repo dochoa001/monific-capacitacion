@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Hoja de referencia visual de la operacion de Monific en HubSpot. Portal 48427391.">
+<meta name="description" content="Hoja de referencia visual de la operación de Monific en HubSpot.">
 <title>Monific en una página</title>
 <style>
   :root {
@@ -317,7 +318,7 @@
 <div class="sheet">
 
   <header class="top">
-    <div class="eyebrow">Portal 48427391 · Hoja de referencia</div>
+    <div class="eyebrow">Hoja de referencia</div>
     <h1>Monific en una página</h1>
     <p class="sub">Cómo se conecta todo lo que ves en HubSpot: por dónde entra cada persona, en qué pipeline vive su caso y quién lo lleva. Los colores se repiten en toda la hoja.</p>
     <div class="legend">
@@ -557,87 +558,77 @@
   <!-- ================= 4 · LÍNEA DE COBRANZA ================= -->
   <section class="panel">
     <div class="eyebrow">Cobranza</div>
-    <h2>La semana antes del vencimiento</h2>
-    <p class="lede">El sistema avisa tres veces; a partir de T-5 el contacto es humano y es tuyo. El Día 0 tiene hora de corte y el Día 1 no tiene gracia.</p>
+    <h2>Antes y después del vencimiento</h2>
+    <p class="lede">Antes del vencimiento, el contacto es humano y es tuyo. Si hay atraso, el sistema avisa y crea tareas en los días 15, 30 y 61.</p>
 
     <figure class="scroller">
-      <svg viewBox="0 0 1000 250" role="img" aria-label="Línea de tiempo de cobranza preventiva: en T menos 10, T menos 7 y T menos 5 el sistema envía recordatorios automáticos; en T menos 5, T menos 3, T menos 2 y el Día 0 el asesor hace contacto manual, incluyendo obligados solidarios desde T menos 2; el Día 0 tiene hora límite de las 18:00 y el Día 1 es incumplimiento sin periodo de gracia.">
+      <svg viewBox="0 0 1000 250" role="img" aria-label="Línea de tiempo de cobranza: el ejecutivo contacta al solicitante 5, 3 y 2 días antes del vencimiento y el día del vencimiento; si hay atraso, el sistema avisa y crea tareas el día 15, el día 30 y el día 61, cuando el ticket pasa a Ejecución de Garantía.">
         <defs>
           <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/>
           </marker>
         </defs>
 
-        <text class="hd" x="30" y="28">SISTEMA · AUTOMÁTICO</text>
+        <text class="hd" x="30" y="28">SISTEMA · AUTOMÁTICO (SI HAY ATRASO)</text>
         <text class="hd" x="30" y="212" style="fill:var(--c-cob)">TÚ · CONTACTO MANUAL</text>
 
-        <!-- axis -->
-        <line class="edge" x1="30" y1="120" x2="872" y2="120" marker-end="url(#ar4)"/>
+        <line class="edge" x1="30" y1="120" x2="975" y2="120" marker-end="url(#ar4)"/>
 
-        <!-- ticks -->
         <g>
-          <circle cx="90" cy="120" r="5" style="fill:var(--muted)"/>
-          <text class="lbl" x="90" y="150" text-anchor="middle">T-10</text>
-          <text class="sub" x="90" y="52" text-anchor="middle">correo</text>
-          <line class="edge" x1="90" y1="60" x2="90" y2="112"/>
-        </g>
-        <g>
-          <circle cx="220" cy="120" r="5" style="fill:var(--muted)"/>
-          <text class="lbl" x="220" y="150" text-anchor="middle">T-7</text>
-          <text class="sub" x="220" y="52" text-anchor="middle">correo</text>
-          <line class="edge" x1="220" y1="60" x2="220" y2="112"/>
+          <circle cx="80" cy="120" r="5" style="fill:var(--c-cob)"/>
+          <text class="lbl" x="80" y="150" text-anchor="middle" style="fill:var(--c-cob)">T-5</text>
+          <line class="edge" x1="80" y1="158" x2="80" y2="170" style="stroke:var(--c-cob)"/>
+          <text class="sub" x="80" y="186" text-anchor="middle" style="fill:var(--c-cob)">1er contacto</text>
         </g>
         <g>
-          <circle cx="360" cy="120" r="5" style="fill:var(--muted)"/>
-          <text class="lbl" x="360" y="150" text-anchor="middle">T-5</text>
-          <text class="sub" x="360" y="52" text-anchor="middle">correo + WhatsApp</text>
-          <line class="edge" x1="360" y1="60" x2="360" y2="112"/>
-        </g>
-
-        <!-- manual side -->
-        <g style="color:var(--c-cob)">
-          <circle cx="360" cy="120" r="5" style="fill:var(--c-cob)"/>
-          <line class="edge" x1="360" y1="128" x2="360" y2="168" style="stroke:var(--c-cob)"/>
-          <text class="sub" x="360" y="186" text-anchor="middle" style="fill:var(--c-cob)">1er contacto · 24 h</text>
+          <circle cx="190" cy="120" r="5" style="fill:var(--c-cob)"/>
+          <text class="lbl" x="190" y="150" text-anchor="middle" style="fill:var(--c-cob)">T-3</text>
+          <line class="edge" x1="190" y1="158" x2="190" y2="170" style="stroke:var(--c-cob)"/>
+          <text class="sub" x="190" y="186" text-anchor="middle" style="fill:var(--c-cob)">2º contacto</text>
         </g>
         <g>
-          <circle cx="500" cy="120" r="5" style="fill:var(--c-cob)"/>
-          <text class="lbl" x="500" y="150" text-anchor="middle" style="fill:var(--c-cob)">T-3</text>
-          <line class="edge" x1="500" y1="128" x2="500" y2="168" style="stroke:var(--c-cob)"/>
-          <text class="sub" x="500" y="186" text-anchor="middle" style="fill:var(--c-cob)">2º contacto · 24 h</text>
+          <circle cx="300" cy="120" r="5" style="fill:var(--c-cob)"/>
+          <text class="lbl" x="300" y="150" text-anchor="middle" style="fill:var(--c-cob)">T-2</text>
+          <line class="edge" x1="300" y1="158" x2="300" y2="170" style="stroke:var(--c-cob)"/>
+          <text class="sub" x="300" y="186" text-anchor="middle" style="fill:var(--c-cob)">+ obligados</text>
         </g>
         <g>
-          <circle cx="650" cy="120" r="5" style="fill:var(--c-cob)"/>
-          <text class="lbl" x="650" y="150" text-anchor="middle" style="fill:var(--c-cob)">T-2</text>
-          <line class="edge" x1="650" y1="128" x2="650" y2="168" style="stroke:var(--c-cob)"/>
-          <text class="sub" x="650" y="186" text-anchor="middle" style="fill:var(--c-cob)">12 h · + obligados</text>
+          <rect x="370" y="104" width="104" height="32" rx="3" style="fill:var(--c-cob-soft);stroke:var(--c-cob);stroke-width:1.5"/>
+          <text class="lbl" x="422" y="125" text-anchor="middle" style="fill:var(--c-cob)">Vencimiento</text>
+          <line class="edge" x1="422" y1="140" x2="422" y2="170" style="stroke:var(--c-cob)"/>
+          <text class="sub" x="422" y="186" text-anchor="middle" style="fill:var(--c-cob)">contacto el mismo día</text>
         </g>
-
-        <!-- day 0 -->
         <g>
-          <rect x="748" y="104" width="104" height="32" rx="3" style="fill:var(--c-cob-soft);stroke:var(--c-cob);stroke-width:1.5"/>
-          <text class="lbl" x="800" y="125" text-anchor="middle" style="fill:var(--c-cob)">Día 0</text>
-          <line class="edge" x1="800" y1="140" x2="800" y2="168" style="stroke:var(--c-cob)"/>
-          <text class="sub" x="800" y="186" text-anchor="middle" style="fill:var(--c-cob)">corte 18:00 · 12 h</text>
+          <circle cx="590" cy="120" r="5" style="fill:var(--muted)"/>
+          <text class="lbl" x="590" y="150" text-anchor="middle">Día 15</text>
+          <line class="edge" x1="590" y1="60" x2="590" y2="112"/>
+          <text class="sub" x="590" y="44" text-anchor="middle">tabla de adeudos</text>
+          <text class="sub" x="590" y="57" text-anchor="middle">+ requerimiento de pago</text>
         </g>
-
-        <!-- day 1 -->
         <g>
-          <rect x="880" y="98" width="82" height="44" rx="3" style="fill:var(--c-cob);stroke:var(--c-cob)"/>
-          <text x="921" y="117" text-anchor="middle" style="fill:var(--surface);font-family:var(--sans);font-size:13px;font-weight:600">Día 1</text>
-          <text x="921" y="133" text-anchor="middle" style="fill:var(--surface);font-family:var(--sans);font-size:10px">incumple</text>
+          <circle cx="740" cy="120" r="5" style="fill:var(--muted)"/>
+          <text class="lbl" x="740" y="150" text-anchor="middle">Día 30</text>
+          <line class="edge" x1="740" y1="60" x2="740" y2="112"/>
+          <text class="sub" x="740" y="44" text-anchor="middle">cobranza formal</text>
+          <text class="sub" x="740" y="57" text-anchor="middle">legal externo + Finanzas</text>
         </g>
-        <text class="sub" x="921" y="164" text-anchor="middle">sin gracia</text>
+        <g>
+          <rect x="822" y="98" width="136" height="44" rx="3" style="fill:var(--c-cob);stroke:var(--c-cob)"/>
+          <text x="890" y="117" text-anchor="middle" style="fill:var(--surface);font-family:var(--sans);font-size:13px;font-weight:600">Día 61</text>
+          <text x="890" y="133" text-anchor="middle" style="fill:var(--surface);font-family:var(--sans);font-size:10px">ejecución de garantía</text>
+          <line class="edge" x1="890" y1="60" x2="890" y2="96"/>
+          <text class="sub" x="890" y="57" text-anchor="middle">ruta prejudicial</text>
+        </g>
       </svg>
-      <figcaption>Sin confirmación de pago registrada antes de las <b>18:00 del Día 0</b>, el sistema asume que no pagó. Si no logras contacto, <b>documenta el intento igual</b>: uno registrado cuenta, uno que solo tú recuerdas no.</figcaption>
+      <figcaption>Los días de mora y el estado de pago los calcula el <b>Admin</b> y llegan cada madrugada. Si no logras contacto, <b>documenta el intento igual</b>: uno registrado cuenta, uno que solo tú recuerdas no.</figcaption>
     </figure>
   </section>
 
   <!-- ================= 5 · OBJETOS ================= -->
   <section class="panel">
     <div class="eyebrow">Dónde vive cada cosa</div>
-    <h2>Los cuatro objetos</h2>
-    <p class="lede">La pregunta que resuelve casi todas las dudas: ¿esto es una persona, una organización, algo que avanza hacia una venta, o algo que hay que resolver?</p>
+    <h2>Los cinco objetos</h2>
+    <p class="lede">La pregunta que resuelve casi todas las dudas: ¿esto es una persona, una organización, algo que avanza, una campaña o algo que hay que resolver?</p>
     <div class="objs">
       <div class="obj">
         <h3>Contacto</h3>
@@ -651,13 +642,18 @@
       </div>
       <div class="obj">
         <h3>Negocio</h3>
-        <div class="ex">avanza hacia una venta</div>
+        <div class="ex">algo que avanza</div>
         <p>El recorrido del solicitante, el acompañamiento del inversionista, y cada compra, venta o liquidación por separado.</p>
+      </div>
+      <div class="obj">
+        <h3>Proyecto</h3>
+        <div class="ex">una campaña</div>
+        <p>Cada campaña de financiamiento. Llega del Admin y une al desarrollador, al solicitante, a los inversionistas y a la cobranza.</p>
       </div>
       <div class="obj">
         <h3>Ticket</h3>
         <div class="ex">hay que resolverlo</div>
-        <p>Atención, Cobranza y UNE. Cobranza vive en tickets: uno por campaña fondeada, no uno por cuota.</p>
+        <p>Servicio al Cliente, Cobranza y UNE. Cobranza vive en tickets: uno por campaña fondeada, no uno por cuota.</p>
       </div>
     </div>
   </section>
@@ -696,10 +692,10 @@
         </tr>
         <tr>
           <td><span class="rolecell"><span class="dot" style="background:var(--c-cob)"></span>Cobranza</span></td>
-          <td>Contacto manual desde T-5</td><td class="num">≤ 24 h</td>
+          <td>Contacto manual antes del vencimiento</td><td class="num">T-5 · T-3 · T-2 · día del vencimiento</td>
         </tr>
         <tr>
-          <td></td><td>T-2 y Día 0</td><td class="num">≤ 12 h · corte 18:00</td>
+          <td></td><td>Avisos automáticos si hay atraso</td><td class="num">días 15 · 30 · 61</td>
         </tr>
         <tr>
           <td><span class="rolecell"><span class="dot" style="background:var(--c-ate)"></span>Atención</span></td>
@@ -741,8 +737,8 @@
   </section>
 
   <footer class="foot">
-    <span>Guía de HubSpot para el equipo Monific · Portal 48427391</span>
-    <span>Agosto 2026</span>
+    <span>Guía de HubSpot para el equipo Monific · Black &amp; Orange</span>
+    <span>Versión 2 · Noviembre 2026</span>
   </footer>
 
 </div>
